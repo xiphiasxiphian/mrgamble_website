@@ -96,11 +96,11 @@ main
 
 .fa-primary
 {
-    fill: #5ba4d4;
+    fill: #db60c7;
 }
 .fa-secondary
 {
-    fill: #3791ce;
+    fill: #e015be;
 }
 .fa-primary, .fa-secondary
 {
@@ -204,6 +204,7 @@ main
 
 .card:hover h2
 {
+    transition: .2s;
     background: linear-gradient(90deg, #743ad5, #d53a9d);
     text-shadow: none;
     -webkit-text-fill-color: transparent;
@@ -212,6 +213,7 @@ main
 }
 .card:hover p
 {
+    transition: .2s;
     background: linear-gradient(90deg, #743ad5, #d53a9d);
     text-shadow: none;
     -webkit-text-fill-color: transparent;
@@ -227,6 +229,7 @@ main
 
 .card-title
 {
+    transition: .2s;
     font-style: bold;
 }
 

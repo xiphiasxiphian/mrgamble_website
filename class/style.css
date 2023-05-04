@@ -96,11 +96,11 @@ main
 
 .fa-primary
 {
-    fill: #5ba4d4;
+    fill: #db60c7;
 }
 .fa-secondary
 {
-    fill: #3791ce;
+    fill: #e015be;
 }
 .fa-primary, .fa-secondary
 {
@@ -157,8 +157,9 @@ main
 {
     display: flex;
     flex-direction: column;
-    padding: 1.5rem;
-    margin-right: 2rem;
+    min-width: 300px;
+    padding: 1rem;
+    margin-right: 1.3rem;
     justify-content: center;
 }
 
@@ -168,7 +169,8 @@ main
     width: 180px;
     height: 180px;
     border-radius: 50%;
-    margin: 16px 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .profile-title
@@ -178,6 +180,7 @@ main
     text-align: center;
     padding: 0.3rem;
     margin: 0 0 0 0;
+    margin-top: 0.5rem; 
 }
 
 .profile-summary-text
@@ -189,7 +192,8 @@ main
 
 .profile-main-text
 {
-
+    position: relative;
+    text-align: justify;
 }
 
 
