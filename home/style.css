@@ -1,0 +1,235 @@
+:root 
+{
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+
+    --nav-text-primary-color: #b6b6b6;
+    --nav-text-secondary-color: #ececec;
+    --nav-bg-primary-color: #23232e;
+    --nav-bg-secondary-color: #141418;
+    --nav-transition-speed: 600ms;
+
+    --main-bg-primary-color: #343438;
+}
+
+body
+{
+    color: var(--nav-text-primary-color);
+    background-color: var(--main-bg-primary-color);
+    margin: 0;
+    padding: 0;
+}
+
+main
+{
+    position: block;
+    z-index: -1;
+    margin-left: 5rem;
+    padding: 1rem;
+}
+
+.navbar
+{
+    width: 5rem;
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+    background: var(--nav-bg-primary-color);
+    transition: width 200ms ease;
+}
+.navbar:hover
+{
+    width: 16rem;
+}
+
+
+.nav-list
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-element
+{
+    width: 100%;
+}
+
+.nav-element:last-child
+{
+    margin-top: auto;
+}
+
+.nav-link
+{
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: var(--nav-text-primary-color);
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+    transition: var(--nav-transition-speed);
+}
+.nav-link svg
+{
+    width: 2rem;
+    min-width: 2rem;
+    margin: 0 1.5rem;
+}
+.nav-link:hover
+{
+    filter: grayscale(0%) opacity(1);
+}
+
+.nav-text
+{
+    display: none;
+    margin-left: 1rem;
+}
+.navbar:hover .nav-text
+{
+    display: block;
+}
+
+.fa-primary
+{
+    fill: #5ba4d4;
+}
+.fa-secondary
+{
+    fill: #3791ce;
+}
+.fa-primary, .fa-secondary
+{
+    transition: var(--nav-transition-speed);
+}
+
+.nav-title
+{
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--nav-text-secondary-color);
+    background: var(--nav-bg-secondary-color);
+    font-size: 1.5rem;
+    letter-spacing: 0.3ch;
+    width: 100%;
+}
+.nav-title svg
+{
+    transform: rotate(0deg);
+    transition: transform var(--nav-transition-speed);
+}
+.navbar:hover .nav-title svg
+{
+    transform: rotate(-180deg);
+}
+
+
+/* Main content */
+
+.main-title
+{
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.3ch;
+}
+
+/* Cards */
+.card-container
+{
+    position: block;
+    z-index: -1;
+    display: flex;
+    padding: 3rem;
+}
+
+.card-origin
+{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 350px;
+    width: 300px;
+    min-width: 250px;
+    padding: 1.5rem;
+    margin-right: 10rem;
+
+    border-width: 7px;
+    border-style: solid;
+
+    border-image: 
+    linear-gradient(
+      to bottom, 
+      #743ad5, 
+      #d53a9d
+    ) 1 100%;
+}
+
+.card
+{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 350px;
+    width: 300px;
+    min-width: 250px;
+    padding: 1.5rem;
+
+    border-radius: 16px;
+    background-color: #17141d;
+    box-shadow: -1rem 0 3rem #000;
+
+    transition: .2s;
+}
+.card:hover
+{
+    transform: translateY(-1rem);
+
+}
+.card:hover~.card
+{
+    transform: translateX(130px)
+}
+.card:not(:first-child)
+{
+    margin-left: -130px;
+}
+
+.card-person
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.card-avatar
+{
+    display: block;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin: 16px 10px;
+}
+
+.half-circle
+{
+    position: absolute;
+
+    top: 75px;
+
+    width: 180px;
+    height: 180px;
+    
+    fill: none;
+    stroke: #b61fe4;
+    stroke-width: 5;
+    stroke-linecap: round;
+    pointer-events: none;
+}
